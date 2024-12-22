@@ -67,8 +67,8 @@ public class EndPoint : MonoBehaviourPunCallbacks
     private void EndUp()
     { 
         Debug.Log("Disconnecting from Photon.");
-        PhotonNetwork.Disconnect();
-        SceneManager.LoadScene(0);  
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene(1);
     }
 
     public void OnPlayerLeftRoom(Player player)

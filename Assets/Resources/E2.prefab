@@ -9818,7 +9818,6 @@ GameObject:
   - component: {fileID: 534367460775705691}
   - component: {fileID: 3036678503505544419}
   - component: {fileID: 6782158670151752732}
-  - component: {fileID: 112258395884104420}
   m_Layer: 0
   m_Name: E2
   m_TagString: Untagged
@@ -9988,6 +9987,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   BoomEffect: {fileID: 0}
+  _explosionAudioClip: {fileID: 0}
+  _thisAudioSource: {fileID: 0}
 --- !u!114 &534367460775705691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10025,19 +10026,6 @@ MonoBehaviour:
   WhenYouWantExplosin: {fileID: 0}
   SpriteRenderer: {fileID: 4925415593278097554}
 --- !u!114 &6782158670151752732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8847901556568183656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b57890fc6d165b448231b15db12c944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CanHit: 1
---- !u!114 &112258395884104420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

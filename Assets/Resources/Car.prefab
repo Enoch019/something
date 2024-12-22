@@ -4906,8 +4906,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8756528126480485903, guid: 571bdeef8552e404cbbb6f6882f0e5c1, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4cfd0e5cb7dbc434f947ce8e212fa726, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4cfd0e5cb7dbc434f947ce8e212fa726, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -4915,7 +4915,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 95
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5221,8 +5221,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3146899520674883278, guid: 571bdeef8552e404cbbb6f6882f0e5c1, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ec82e5f7e815e0e4abf905d948a94449, type: 3}
+  m_Resource: {fileID: 8300000, guid: ec82e5f7e815e0e4abf905d948a94449, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -5612,6 +5612,7 @@ GameObject:
   - component: {fileID: -856509026153083641}
   - component: {fileID: 411411377216998354}
   - component: {fileID: 668384815951062328}
+  - component: {fileID: 6015573905488055382}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -5707,9 +5708,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driftFactor: 0.95
-  accelerationFactor: 34
-  turnFactor: 4.5
-  maxSpeed: 35
+  accelerationFactor: 30
+  turnFactor: 4
+  maxSpeed: 20
   a: 0
 --- !u!114 &-8218429742171764855
 MonoBehaviour:
@@ -5723,6 +5724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2717a7602e2b0f043a2648f2b0fbd9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!114 &4635968914014503020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5929,6 +5931,20 @@ MonoBehaviour:
   tireS: {fileID: 65277949550326992}
   engineS: {fileID: 459251251681810726}
   carHitS: {fileID: 6344157915631351135}
+--- !u!114 &6015573905488055382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294514267140994941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9434eedb559621469f6313b1620cefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Coins: 0
+  CoinTexts: {fileID: 0}
 --- !u!1 &8895205715357910252
 GameObject:
   m_ObjectHideFlags: 0

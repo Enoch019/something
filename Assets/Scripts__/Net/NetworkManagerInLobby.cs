@@ -165,7 +165,7 @@ public class NetworkManagerInLobby : MonoBehaviourPunCallbacks
         if (PhotonNetwork.InRoom && !isSceneLoaded)
         {
             isSceneLoaded = true;
-            if(!PhotonNetwork.IsMasterClient)
+            //if(!PhotonNetwork.IsMasterClient)
                 SpawnThing();
         }
     }
@@ -178,7 +178,7 @@ public class NetworkManagerInLobby : MonoBehaviourPunCallbacks
         //Debug.Log(teamTag);
         
             Debug.Log("do something now ");
-            Vector3 spawnPosition = new Vector3(0f, 0f, 0f);
+            Vector3 spawnPosition = new Vector3(600f, -44f, 0f);
             GameObject playerObj = PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition, Quaternion.identity);
             if (playerObj.GetComponent<PhotonView>().IsMine)
             {
@@ -200,8 +200,8 @@ public class NetworkManagerInLobby : MonoBehaviourPunCallbacks
     public void SpawnThing()
     {
         //GetComponent<PhotonView>().RPC("GiveHimMessage" , RpcTarget.All , PhotonNetwork.NickName + " Joined the room.");
-        GameObject playerObj = PhotonNetwork.Instantiate(playerPrefab.name, new Vector3(0,0,0), Quaternion.identity);
-        PhotonNetwork.Instantiate(_car.name , Vector3.zero , Quaternion.identity);
+        GameObject playerObj = PhotonNetwork.Instantiate(playerPrefab.name, new Vector3(600f, -44f, 0f), Quaternion.identity);
+        PhotonNetwork.Instantiate(_car.name , new Vector3(600f, -44f, 0f) , Quaternion.identity);
     }
     
     [PunRPC]

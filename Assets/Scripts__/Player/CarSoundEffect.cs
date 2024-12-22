@@ -13,15 +13,21 @@ public class CarSoundEffect : MonoBehaviour
     private float desiredEnginePitch = 0.5f;
     private float tireDriftPitch = 0.5f; 
     private CarController _carController;
+    private NetworkManagerInGame _networkManagerInGame;
 
     private void Awake()
     {
         _carController = GetComponent<CarController>(); 
+        _networkManagerInGame = GameObject.Find("NetworkManager2").GetComponent<NetworkManagerInGame>(); 
     }
 
     private void Update()
     {
-        
+        if (_networkManagerInGame.AllReady)
+        {
+            UpdateEngineSFX();
+            UpdateDriftSFX();
+        }
     }
 
     void UpdateEngineSFX()

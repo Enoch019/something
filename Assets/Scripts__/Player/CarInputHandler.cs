@@ -36,6 +36,10 @@ public class CarInputHandler : MonoBehaviourPunCallbacks
         {
             // 입력값 읽기
             inputVector = inputActions.Player.Move.ReadValue<Vector2>();
+            if (!(inputVector.y < 0))
+            {
+                inputVector.y = 1; 
+            }
 
             // 입력값 전달
             _carController.SetInputVector(inputVector);

@@ -6,7 +6,9 @@ public class Explosion : MonoBehaviourPunCallbacks
     public float explosionRadius = 10f; // 폭발 반경
     public float explosionForce = 10f; // 폭발 힘
     public LayerMask affectedLayers;   // 영향을 받을 레이어
-    public Transform BoomEffect; 
+    public Transform BoomEffect;
+    [SerializeField] private AudioClip _explosionAudioClip;
+    [SerializeField] private AudioSource _thisAudioSource; 
 
     [PunRPC]
     public void Explode()
@@ -30,6 +32,11 @@ public class Explosion : MonoBehaviourPunCallbacks
                 float distance = Vector2.Distance(rb.position, explosionPosition);
                 float force = Mathf.Lerp(explosionForce, 0, distance / explosionRadius);
 
+                if (_explosionAudioClip != null && gameObject.name == "E")
+                {
+                    _thisAudioSource.PlayOneShot(_explosionAudioClip);
+                }
+                
                 if (BoomEffect != null)
                 {
                     BoomEffect.gameObject.SetActive(true);    

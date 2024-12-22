@@ -19,7 +19,7 @@ public class CamCode : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        if (!isFound && !PhotonNetwork.IsMasterClient)
+        if (!isFound )
         {
             Transform transform = GameObject.FindGameObjectWithTag("Player").transform;
             if (transform != null)

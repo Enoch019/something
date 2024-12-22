@@ -22,10 +22,10 @@ public class NetworkManagerInGame : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (inputActions.Player.Button.triggered && !isClick && !PhotonNetwork.IsMasterClient)
+        if (inputActions.Player.Button.triggered && !isClick )
         {
             isClick = true; 
-            photonView.RPC("AddReadyNum" , RpcTarget.All);
+            photonView.RPC("AddReadyNum" , RpcTarget.All); 
         }
     }
 

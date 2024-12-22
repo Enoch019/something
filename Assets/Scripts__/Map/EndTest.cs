@@ -46,7 +46,7 @@ public class EndTest : MonoBehaviour
     
     private void True()
     {
-        texts[1].text = $"SCORE : {_distanceTracker.GetTotalDistance().ToString("F1")}"; 
+        texts[1].text = $"SCORE : {_distanceTracker.GetTotalDistance().ToString("F0")}"; 
         texts[1].gameObject.SetActive(true);
         texts[2].gameObject.SetActive(true);
         image.gameObject.SetActive(true);
